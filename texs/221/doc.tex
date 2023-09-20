@@ -1,0 +1,270 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[a4paper,top=1.3cm,bottom=2cm,left=1.5cm,right=1.5cm,marginparwidth=0.75cm]{geometry}
+
+% Пакеты
+\usepackage{mathtext}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{cmap}
+\usepackage{longtable}
+\usepackage{icomma}
+\usepackage{euscript}
+\usepackage{float}
+\usepackage{cutwin}
+\usepackage{mathrsfs}
+\usepackage{adjustbox}
+\usepackage{dashbox}
+\usepackage[normalem]{ulem}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}                 %!  закрепляет кодировку utf8
+\usepackage[english,russian]{babel}         %!  подключает русский и английский
+%математические шрифты:
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathrsfs,mathtools}
+\usepackage[colorlinks, linkcolor = purple]{hyperref}      %!  оглавление для панели навигации по PDF-документу + гиперссылки
+\usepackage{xcolor}                         %!  добавляет цвета
+\usepackage{enumitem}                       %!  задание макета перечня.
+\usepackage{xpatch}                         %?  работа с renewcommand и макросами
+\usepackage{cancel}                         %   зачёкивания текста (!!!) для slash-нотации использовать \usepackage{slashed}!!
+\usepackage{upgreek}                        %   заглавные греческие буквы
+\usepackage{lipsum}                         %?  для вставки кучи текста при форматировании
+\usepackage[version=4]{mhchem}              %   химические формулы
+\usepackage{multirow}                       %   объединение строк в матрицах
+\usepackage{stackengine}                    %   stack символов
+\usepackage{tikz}                           %!  рисунки
+\usetikzlibrary{positioning}                %?  библиотека для тикза
+\usepackage{titletoc}                       %!  форматирование содержания и заголовков
+\usepackage{titlesec}                       %!  форматирование содержания и заголовков
+\usepackage{wrapfig}                        %   обтекание таблиц и рисунков
+\usepackage{chngcntr}                       %!  для setcounter
+\usepackage{fancyhdr}                       %!  для колонтитулов
+\usepackage{makecell}                       %?  матрицы с разными выравниваниями и т.п
+\usepackage{indentfirst}                    %   добавить indent перед первым
+\usepackage{tocloft}                        %?  изменение названий глав и разделов
+\usepackage{soul}                           %   типографические примочки, типо зачёркивания и подчёркивания
+\usepackage[stable]{footmisc}               %?  продвинутые сноски
+\usepackage{subfig}                         %   несколько картинок рядом
+   %  задаёт поля страниц
+
+% pgf plots
+% \usepackage{pgfplots}
+% \pgfplotsset{compat=1.17}
+
+\mathtoolsset{showonlyrefs=true}
+
+%Обозначения теорем и т.п
+\theoremstyle{definition}
+\newtheorem*{definition}{Определение}
+\newtheorem{statement}{Предложение}[section]
+\newtheorem{lemma}{Лемма}[section]
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem*{theoremn}{Теорема}
+\newtheorem*{corollary}{Следствие}
+\newtheorem*{example}{Пример}
+\newtheorem*{note}{Замечание}
+\newtheorem*{problem}{Задача}
+
+%Шарабара для содержания и внешнего вида нумерации
+\counterwithout{footnote}{section}\DeclareRobustCommand{\divby}{%
+	\mathrel{\text{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}}%
+}
+
+\usepackage{titlesec}
+\titlelabel{\thetitle.\quad} %точка в section
+
+%Толерантный квадратик чтд
+%\makeatletter \renewenvironment{proof}[1][\proofname]{\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\bfseries#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse} \makeatother
+%\renewcommand\qedsymbol{$\squareulblack$}
+%\newcommand{\usubseteq}{\mathbin{\rotatebox[origin=c]{90}{$\subset$}}}
+%\DeclareFontEncoding{LS2}{}{\noaccents@}
+%\DeclareFontSubstitution{LS2}{stix}{m}{n}
+%\DeclareSymbolFont{arrows3}{LS2}{stixtt}{m}{n}
+%\DeclareMathSymbol{\squareulblack}{\mathord}{arrows3}{"88}
+
+%Разные операторы и символы
+\newcommand{\dotpr}[2]{\bra{#1}\ket{#2}}
+\let\AA\relax
+%\let\oldvarphi\phi %оно делает так, что \phi становится правильным фи
+%\let\phi\varphi
+%\let\varphi\oldvarphi
+\let\emptyset\varnothing
+\DeclareMathOperator*{\esssup}{ess sup}
+\DeclareMathOperator*{\ord}{ord}
+\DeclareMathOperator*{\supp}{supp}
+\DeclareMathOperator*{\pr}{pr}
+\DeclareMathOperator*{\Ker}{Ker}
+\DeclareMathOperator*{\Vol}{Vol}
+\DeclareMathOperator*{\rg}{rk}
+\DeclareMathOperator*{\Ima}{Im}
+\DeclareMathOperator*{\Alt}{Alt}
+\DeclareMathOperator*{\Sym}{Sym}
+\newcommand{\eqdef}{\stackrel{\text{\tiny{def}}}{=}}
+\newcommand{\pp}{\partial}
+\newcommand{\AA}{\mathcal{A}}
+\newcommand{\BB}{\mathcal{B}}
+\newcommand{\MM}{\mathbb{M}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\FFF}{\mathbb{F}}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\FF}{\mathcal{F}}
+\newcommand{\sS}{\mathcal{S}}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+		\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+
+%%% Заголовок
+\author{Сидорчук Максим Б01-204}
+\title{Лабораторная работа 2.2.1 \\
+	\textbf{Исследование взаимной диффузии газов}}
+\date{\today}
+
+\begin{document}
+
+{\Large \maketitle}
+
+\paragraph*{Цель работы:} 1) регистрация зависимости концентрации гелия в воздухе от времени с помощью датчиков теплопроводности при разных начальных давлениях смеси газов; 2) определение коэффициента диффузии по результатам измерений.
+
+\paragraph*{В работе используются:} измерительная установка; форвакуумный насос; баллон с газом  (гелий); манометр; источник питания; магазин сопротивлений; гальванометр; секундомер.
+
+\section{Введение}
+
+\textit{Диффузией} называют самопроизвольное взаимное проникновение веществ друг в друга, происходящее вследствие хаотичного теплового движения молекул. При перемешивании молекул разного сорта говорят о взаимной (или концентрационной) диффузии.
+
+Диффузия в системе, состоящей из двух компонентов $ a $ и $ b $ (бинарная смесь), подчиняется закону Фика: плотности потока компонентов $ j_{a,b} $ (количество частиц, пересекающих единичную площадку в единицу времени) пропорциональны градиентам их концентраций $ \nabla n_{a,b}$, что в одномерном случае можно записать как
+
+\[ j_a = -D\dfrac{\partial n_a}{\partial x}, \quad j_b = -D\dfrac{\partial n_b}{\partial x}, \]
+где $ D $ -- коэффициент взаимной диффузии компонентов. Знак <<минус>> отражает тот факт, что диффузия идёт в направлении выравнивания концентраций. Равновесие достигается при равномерном распределении вещества по объёму сосуда ($ \partial n / \partial x = 0 $).
+
+В случае работы с данной установкой можно считать, что диффузионный поток одинаков в любом сечении трубки, соединяющей сосуды $V_1$ и $V_2$. Следовательно:
+
+\begin{align}
+	J = -DS\dfrac{n_1-n_2}{l} \qquad DS\frac{n_1-n_2}{l} = -V_1\dfrac{dn_1}{dt} = V_2\dfrac{dn_2}{dt} \\
+	\dfrac{dn_1 - dn_2}{dt} = -\dfrac{n_1-n_2}{l}DS\left(\dfrac{1}{V_1}+\dfrac{1}{V_2}\right) \quad\Rightarrow\quad n_1-n_2 = (n_1-n_2)_0 e^{-\frac{t}{\tau}}
+\end{align}
+
+В данной работе исследуется взаимная диффузия гелия и воздуха. Давление P и температура T в условиях опыта предполагаются неизменными: $ p=(n_{He}+n_{\text{в}})kT $, где $ n_{He} $ и $ n_{\text{в}} $ -- концентрации (объёмные плотности) диффундирующих газов. Поэтому для любых изменений концентраций справедливо $ \Delta n_{He}=-\Delta n_{\text{в}} $. Следовательно, достаточно ограничиться описанием диффузии одного из компонентов, например гелия $ n_{He} $:
+
+\begin{equation}\label{1}
+	j_{He}=-D\dfrac{\partial 	n_{He}}{\partial x}.
+\end{equation}
+
+Приведём теоретическую оценку для коэффициента диффузии. В работе концентрация гелия, как правило, мала $ (n_{He} \ll n_\text{в}) $. Кроме того, атомы гелия существенно легче молекул, составляющих воздух ($ \mu_{He} \ll \mu_{O_2}, \mu_{N_2} $), значит и их средняя тепловая скорость велика по сравнению с остальными частицами. Поэтому перемешивание газов в работе можно приближенно описывать как диффузию примеси лёгких частиц $ He $ на практически стационарном фоне воздуха. Коэффициент диффузии в таком приближении равен
+
+\begin{equation}\label{2}
+	D=\dfrac{1}{3}\lambda 	\overline{v},
+\end{equation}
+
+где $ \overline{v}=\sqrt{\frac{8RT}{\pi \mu}} $ -- средняя тепловая скорость частиц примеси, $ \lambda = \frac{1}{n_0\sigma} $ -- их длина свободного пробега, $ n_0 $ -- концентрация рассеивающих центров (фона), $ \sigma $ -- сечение столкновения частиц примеси с частицами фона.
+
+Таким образом, теория предсказывает, что коэффициент диффузии бинарной смеси обратно пропорционален давлению в системе $ D \propto 1/P $, и не зависит от пропорций компонентов, что и предлагается проверить в работе экспериментально.
+
+\subsection{Экспериментальная установка}
+
+\begin{wrapfigure}{l}{7.25cm}
+	\includegraphics[scale=0.33]{facility}
+	\caption{Схема установки}
+	\label{facility}
+\end{wrapfigure}
+
+Для исследования взаимной диффузии используется следующая установка:
+
+Здесь $V_1,\; V_2$ -- два сосуда с примерно равным объемом, в которые мы будем загонять воздух и гелий.
+
+Данная конструкция позволяет провести диффузию, которая возможна только при равенстве давлений.
+
+Основное оборудование, с помощью которого мы будем снимать измерения -- датчики теплопроводности, через которые пропускают ток. Они подключены к мосту, который позволяет нам устанавливать начальное равновесное состояние.
+
+При изменении концентрации в колбах вольтметр покажет нам разность напряжений на датчиках, что, из-за их конструкции, означает разность концентраций.
+
+С помощью изменения напряжения мы и будем изучать процесс диффузии, т.к. во время ее протекания концентрации газов начинают устанавливаться, что заметно на графике разницы напряжений от времени.
+
+\section{Выполнение}
+
+\begin{enumerate}
+\item Для смеси гелий-воздух исследуем зависимость коэффициента взаимной диффузии от начального давления в системе. Для этого будем фиксировать с помощью компьютера в лаборатории зависимость показаний вольтметра от времени, прошедшего с начала эксперимента. Из-за объема данных, полученных в результате этой работы, приведение их здесь не представляется возможным. Эксперимент проводился при атмосферном давлении $P=752.8$торр.
+
+\item По полученным данным построим графики зависимостей логарифма напряжения от времени. Проверим то, что процесс диффузии подчиняется закону: \[U = U_0 \cdot e^{-\dfrac{t}{\tau}}.\]
+
+% \begin{figure}[h!]
+% 	\centering
+% 	\includegraphics[scale=0.542]{-0.000727.png}
+%         \includegraphics[scale=0.542]{-0.001056.png}
+%         \includegraphics[scale=0.542]{-0.002154.png}
+%         \includegraphics[scale=0.542]{-0.002873.png}
+%         \includegraphics[scale=0.542]{-0.003321.png}
+%         \includegraphics[scale=0.542]{-0.005126.png}
+
+% \end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.7]{speed.pdf}
+\end {figure}
+
+\item Графики линейны, следовательно у нас действительно происходит диффузия. Далее мы можем найти $\tau$ как коэффициент наклона. Находить будем по МНК. В нашем случае: $$\ln{U} =a + k t $$
+
+
+\item Проведем расчеты для каждого значения давления, получим таблицу:
+\def\arraystretch{1.3}%
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		$ P $, торр & $ k $, с$ ^{-1} $        \\ \hline
+		41          & $ (-0.0259 \pm 0.004 ) $ \\ \hline
+		124         & $ (-0.0047 \pm 0.0003) $ \\ \hline
+		165         & $ (-0.0058 \pm 0.0004) $ \\ \hline
+		210         & $ (-0.0074 \pm 0.0006) $ \\ \hline
+		251         & $ (-0.0064 \pm 0.0006) $ \\ \hline
+	\end{tabular}
+\end{table}
+
+\item Далее посчитаем коэффициенты взаимной диффузии для различных давлений по формуле:
+
+\[
+	D = -\frac{kVL}{2S}
+\]
+\[
+	\sigma_D = D \,\, \sqrt[]{(\frac{\sigma_k}{a})^2 + (\frac{3\sigma_V}{2V})^2 + (\frac{\sigma{L/S}}{L/S})^2}
+\]
+
+% $$D = \frac{1}{\tau}\frac{VL}{2S}$$
+% $$\Delta D = D \cdot \sqrt{\left(\frac{\Delta \tau}{\tau}\right)^2 + \left(\frac{\Delta V}{V}\right)^2 + \left(\frac{\Delta L}{L}\right)^2 + \left(\frac{\Delta S}{S}\right)^2}$$
+
+Параметры установки : $V_1 = V_2 = V = (800\pm 5)\text{ см}^3$, $\dfrac{L}{S} = (15.0\pm 0.1)\text{ см}^{-1}$.
+
+Построим график зависимости $D(P^{-1})$
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		$P$, торр & $D, \text{см}^2/c$ & $\sigma_D, \text{см}^2/c$ & $P^{-1}, \text{торр}^{-1}*10^{-3}$ & $\sigma_{P^{-1}}, \text{торр}^{-1}*10^{-3}$ \\ \hline
+		40        & 12.68              & 0.61                      & 25.00                              & 2.3                                         \\ \hline
+		124       & 4.05               & 0.37                      & 8.07                               & 0.9                                         \\ \hline
+		165       & 3.31               & 0.31                      & 6.06                               & 0.6                                         \\ \hline
+		210       & 2.40               & 0.28                      & 4.76                               & 0.4                                         \\ \hline
+		251       & 1.91               & 0.24                      & 3.98                               & 0.4                                         \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+	\centering{
+	\includegraphics[scale=0.7]{lin.png}
+	\caption{Зависимость $ D $ от $ \dfrac{1}{P} $}
+	\label{graph2}}
+\end{figure}
+
+По графику видно, что точки достаточно неплохо ложатся на прямую. Рассчитаеи коеффициент диффузии при атм давлении, экстраполировав зависимость $D(\frac{1}{P})$ до точки соответствующей атм давлению:
+
+\[D = 0.67 \pm 0.06 \frac{c^2}{c}\]
+\[D_\text{табл}=0.57 \frac{c^2}{c}\]
+
+Как видим, табличное значение попадает в погрешность найденного значения, что свидительствует о неплохом качестве проведения эксперимента.
+
+\end{enumerate}
+
+\end{document}

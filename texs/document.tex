@@ -1,0 +1,61 @@
+\documentclass[a4paper]{article}
+
+\usepackage[a4paper,top=2cm,bottom=2cm,left=0.5cm,right=0.5cm,marginparwidth=1.75cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage[]{amsmath,amsfonts,amssymb,amsthm,mathtools}
+\usepackage[]{wasysym}
+\usepackage[]{float}
+\usepackage{multicol}
+\usepackage{amsfonts}
+\usepackage{indentfirst}
+\usepackage{longtable}
+\usepackage{natbib}
+\usepackage{mathrsfs}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{mathtext}
+\usepackage{amsmath}
+\usepackage{siunitx} % Required for alignment
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage[T1,T2A]{fontenc}
+\usepackage{caption}
+\usepackage{gensymb}
+
+
+\date{\today}
+\title{Рт лаба №1}
+\author{Сидорчук Максим}
+
+\begin{document}
+\maketitle
+
+\section{Часть 1 : Делитель напряжения}
+
+В данной части работы был собран делитель напряжения из 2 резисторов с сопротивлением 20 кОм и 5.1 кОм.
+При подаче напряжения в 10 В на вход делителя, на выходе было получено напряжение \(E^* = 248.6 \text {мВ} * 10 = 2.48 \text {В}\).
+Далее измерим внутреннее сопротивление получившегося источника, подключив к нему нагрузку
+в виде резистора с \(R_l = 10\) кОм. Получили \(U_l = 173.1 \text{мВ} * 10 = 1.731\) В. Оценим
+внутреннее сопротивление источника по формуле \(R^* = \frac{E^* - U_l}{U_l} * R_l = 4.32\) кОм.
+
+В следующей подчасти задания необходимо произвести измерение с синусоидальным входным сигналом.
+Амплитуда входного сигнала \(e = 5\)В, амплитуда выходного \(u = 82.533 * 10 * 10^{-3} = 0.8\) В.
+Тем самым получаем коеффициент передачи \(k = \frac{u}{e} = 0.16\).
+
+\section{Часть 2 : Параллельный сумматор}
+
+Для начала по 2 параметрам \(\alpha = 0.4\) и \(\beta = 0.2\), а также \(R_1 = 10\) кОм,
+найдем сопротивления \(R_2 = \frac{\alpha}{\beta} * R_1 = 20 \text{кОм и } R = \frac{3 * (R_1 || R_2)}{2} = R_1 = 10\) кОм.
+
+Подключим синусоидальное напряжение с амплитудой 2В к $E_1$ и постоянное напряжение 5В к $E_2$. Результирующая амплитуда
+напряжения на выходе сумматора составляет $U_\text{amp} = 1.18$ В с постоянной составляющей $U_\text{const} = 0.69$ В.
+
+Найдем коеффициенты сумматора, замыкая правую и левую ветвь. Получаем $\alpha = 1.8 / 5.0 = 0.36$ и $\beta = 0.8 / 5.0 = 0.16$, которые достаточно близки к теоретическим.
+
+Методом двух нагрузок найдем найдем эквивалентное сопротивление сумматора. $E^* = 2.88$ В, при $R_l = 5.1$ кОм найдем напряжение на нагрузочном резисторе $U_l = 1.02$ В.
+Отсюда получаем, что $R^* = \frac{(E^* - U_l) \cdot R_l}{U_l} = 9.3$ кОм.
+
+
+\end{document}
