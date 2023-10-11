@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.31)  11 OCT 2023 15:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.31)  6 OCT 2023 09:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/i-am-tost/los_projectados/labs/texs/document.tex
-(/home/i-am-tost/los_projectados/labs/texs/document.tex
+**/home/i-am-tost/los_projectados/labs/texs/rtlabs1.tex
+(/home/i-am-tost/los_projectados/labs/texs/rtlabs1.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -635,21 +635,8 @@ Package caption Info: subfigure package is loaded.
 Package caption Info: wrapfig package is loaded.
 ) (/usr/share/texlive/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
-) (./document.aux
-
-LaTeX Warning: Label `tab:my_label' multiply defined.
-
-
-LaTeX Warning: Label `fig:vac' multiply defined.
-
-
-LaTeX Warning: Label `fig:vac' multiply defined.
-
-
-LaTeX Warning: Label `fig:vac' multiply defined.
-
-)
-\openout1 = `document.aux'.
+) (./rtlabs1.aux)
+\openout1 = `rtlabs1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
@@ -761,65 +748,22 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 33.
  (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+) [1
 
- []
-
-<fig1.PNG, id=1, 493.845pt x 342.5297pt>
-File: fig1.PNG Graphic file (type png)
-<use fig1.PNG>
-Package pdftex.def Info: fig1.PNG  used on input line 54.
-(pdftex.def)             Requested size: 284.52756pt x 197.34503pt.
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./fig1.PNG>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<lol.png, id=17, 947.4597pt x 546.3612pt>
-File: lol.png Graphic file (type png)
-<use lol.png>
-Package pdftex.def Info: lol.png  used on input line 150.
-(pdftex.def)             Requested size: 569.05515pt x 328.15271pt.
-[2]
-Overfull \vbox (129.96208pt too high) has occurred while \output is active []
-
- [3 <./lol.png>]
-<graph2.png, id=31, 947.4597pt x 546.3612pt>
-File: graph2.png Graphic file (type png)
-<use graph2.png>
-Package pdftex.def Info: graph2.png  used on input line 172.
-(pdftex.def)             Requested size: 569.05515pt x 328.15271pt.
-<fchh.png, id=32, 941.6781pt x 532.26855pt>
-File: fchh.png Graphic file (type png)
-<use fchh.png>
-Package pdftex.def Info: fchh.png  used on input line 184.
-(pdftex.def)             Requested size: 569.05515pt x 321.66205pt.
- [4 <./graph2.png>]
-<Screenshot from 2023-10-11 14-58-30.png, id=38, 290.08376pt x 417.56pt>
-File: Screenshot from 2023-10-11 14-58-30.png Graphic file (type png)
-<use Screenshot from 2023-10-11 14-58-30.png>
-Package pdftex.def Info: Screenshot from 2023-10-11 14-58-30.png  used on input line 203.
-(pdftex.def)             Requested size: 284.52756pt x 409.58827pt.
- [5 <./fchh.png>] [6 <./Screenshot from 2023-10-11 14-58-30.png>] (./document.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./rtlabs1.aux) ) 
 Here is how much of TeX's memory you used:
- 12357 strings out of 478287
- 246289 string characters out of 5849289
- 545263 words of memory out of 5000000
- 30365 multiletter control sequences out of 15000+600000
- 484644 words of font info for 75 fonts, out of 8000000 for 9000
+ 12305 strings out of 478287
+ 245384 string characters out of 5849289
+ 531139 words of memory out of 5000000
+ 30320 multiletter control sequences out of 15000+600000
+ 484309 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,12n,79p,1817b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb>
-Output written on document.pdf (6 pages, 635962 bytes).
+ 71i,6n,79p,645b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb>
+Output written on rtlabs1.pdf (1 page, 164950 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 79 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

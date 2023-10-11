@@ -1,49 +1,72 @@
-import sounddevice as sd
-import matplotlib.pyplot as plt
 import numpy as np
-from scipy.fft import fft, fftfreq
+import matplotlib.pyplot as plt
 
-time_0 = 0.5
-fs = 44100
-T = 1.0 / fs
-N_0 = int (fs * time_0)
 
-time = 0
-N = 0
-sound = np.array ([])
+f1 = [18, 19, 20, 21, 22, 23, 24, 25, 26, 26.3, 26.7, 27.1, 27.2, 27.3, 27.4, 27.45, 27.6,
+      27.7, 27.9, 28, 28.1, 28.2, 28.3, 28.4, 28.5, 28.7, 28.85, 29, 30.1, 31, 32, 33, 34, 35, 36]
 
-try:
-    for i in range (100):
-        y = sd.rec (N_0, samplerate=fs, channels=2)
-        plt.figure (figsize = (16, 9), dpi = 100)
-        N += N_0
-        time += time_0
-        x = np.linspace (0.0, N * T, N, endpoint=False)
-        xf = fftfreq (N, T)[:N//2]
-        plt.xlim (0, 1000)
-        plt.grid()
-        sd.wait ()
-        y = np.array ([i[0] for i in y], dtype=float)
-        sound = np.append (sound, y)
-        yf = fft (sound)
-        plt.plot(xf, time / N * np.abs(yf[0:N//2]))
-        plt.xlabel (fr'$\nu$, herz')
-        plt.savefig ('lol.png')
-        plt.close ()
-    exit (0)
-finally:
-    y = sd.rec (N_0, samplerate=fs, channels=2)
-    plt.figure (figsize = (16, 9), dpi = 100)
-    N += N_0
-    time += time_0
-    x = np.linspace (0.0, N * T, N, endpoint=False)
-    xf = fftfreq (N, T)[:N//2]
-    plt.xlim (0, 1000)
-    plt.grid()
-    sd.wait ()
-    y = np.array ([i[0] for i in y], dtype=float)
-    sound = np.append (sound, y)
-    yf = fft (sound)
-    plt.plot(xf, time / N * np.abs(yf[0:N//2]))
-    plt.xlabel (fr'$\nu$, herz')
-    plt.show ()
+f2 = [15, 16, 17, 18, 19, 19.3, 19.6, 20, 20.1, 20.2, 20.3, 20.4, 20.5, 20.6, 20.7, 20.8, 20.9,
+      21, 21.2, 21.3, 21.4, 21.5, 21.6, 21.7, 21.8, 22, 22.3, 22.6, 23, 24, 25, 26, 28, 30, 32]
+
+u1 = [0.039, 0.04, 0.05, 0.06, 0.07, 0.09, 0.11, 0.16, 0.24, 0.28, 0.37, 0.512, 0.576, 0.649, 0.68, 0.73, 0.91,
+      0.87, 0.89, 0.85, 0.79, 0.74, 0.69, 0.62, 0.56, 0.45, 0.41, 0.36, 0.21, 0.15, 0.12, 0.1, 0.08, 0.07, 0.06]
+
+u2 = [0.03, 0.04, 0.05, 0.07, 0.11, 0.12, 0.15, 0.2, 0.21, 0.22, 0.24, 0.27, 0.29, 0.33, 0.38, 0.4, 0.46,
+      0.52, 0.56, 0.57, 0.53, 0.52, 0.49, 0.4, 0.38, 0.3, 0.24, 0.2, 0.15, 0.1, 0.076, 0.06, 0.04, 0.03, 0.03]
+
+f1 = np.array (f1)
+f2 = np.array (f2)
+u1 = np.array (u1)
+u2 = np.array (u2)
+
+plt.grid ()
+
+plt.xlabel ("f / f0")
+plt.ylabel ("U / U0")
+
+f01 = 27.6
+f02 = 21.2
+
+f1 = f1 / f01
+f2 = f2 / f02
+
+u1 = u1 / 0.91
+u2 = u2 / 0.57
+
+
+plt.plot (f1, u1, color = 'blue', linestyle = '-', marker = '+', linewidth = 0.5, markersize = 6, label = 'c2')
+
+plt.plot (f2, u2, color = 'red', linestyle = '-', marker = 'x', linewidth = 0.5, markersize = 5, label = 'c4')
+
+plt.axhline (y=1/np.sqrt(2), color = 'y', linestyle = '--', label = '1 / sqrt(2)')
+
+plt.legend ()
+
+plt.show ()
+
+f_f0 = [0.899280575539568,0.935251798561151,0.953237410071942,0.967625899280576,0.971223021582734,0.974820143884892,0.97841726618705,0.97841726618705,0.985611510791367,0.989208633093525,0.992805755395684,0.996402877697842,1,1.00359712230216,1.00719424460432,1.01079136690647,1.01438848920863,1.01798561151079,1.02158273381295,1.02517985611511,1.02877697841727,1.03237410071942,1.03597122302158,1.03956834532374,1.05035971223022,1.06474820143885,1.07913669064748,1.11510791366906,]
+
+x_x0 = [-1.7,-1.6,-1.5,-1.3,-1.2,-1.2,-1.1,-1.1,-0.8,-0.7,-0.6,-0.4,0,0.2,0.4,0.5,0.6,0.8,0.9,1,1.1,1.2,1.2,1.2,1.3,1.4,1.4,1.4,
+]
+
+plt.figure (figsize = (16, 9), dpi = 200)
+
+plt.grid ()
+
+plt.plot (f_f0, x_x0, color = 'blue', linestyle = '-', marker = '+', linewidth = 0.5, markersize = 6, label = 'c2')
+
+f_f0 = [0.849056603773585,0.89622641509434,0.943396226415094,0.957547169811321,0.962264150943396,0.966981132075472,0.971698113207547,0.976415094339623,0.981132075471698,0.985849056603774,0.990566037735849,0.995283018867925,1,1.00471698113208,1.00943396226415,1.01415094339623,1.0188679245283,1.02358490566038,1.02830188679245,1.03301886792453,1.0377358490566,1.04245283018868,1.04716981132075,1.05660377358491,1.06603773584906,1.07547169811321,1.08490566037736,1.13207547169811,
+]
+
+x_x0 = [
+-2.6,-2.3,-1.9,-1.8,-1.7,-1.6,-1.5,-1.4,-1.2,-1,-0.7,-0.4,0,0.2,0.4,0.6,0.8,1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.8,1.8,1.8,
+]
+
+# plt.plot (f_f0, x_x0, color = 'red', linestyle = '-', marker = 'x', linewidth = 0.5, markersize = 5, label = 'c4')
+
+plt.axhline (y=np.pi / 4, color = 'y', linestyle = '--', label = 'pi / 4')
+plt.axhline (y=-np.pi / 4, color = 'y', linestyle = '--', label = '- pi / 4')
+
+plt.legend ()
+
+plt.show ()
