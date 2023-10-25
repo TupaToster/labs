@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.31)  12 OCT 2023 11:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.31)  12 OCT 2023 13:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/i-am-tost/los_projectados/labs/323/lab.tex
-(/home/i-am-tost/los_projectados/labs/323/lab.tex
+**/home/i-am-tost/los_projectados/labs/326/main.tex
+(/home/i-am-tost/los_projectados/labs/326/main.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -635,7 +635,10 @@ Package caption Info: subfigure package is loaded.
 Package caption Info: wrapfig package is loaded.
 ) (/usr/share/texlive/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
-) (./lab.aux
+) (./main.aux
+
+LaTeX Warning: Label `fig:vac' multiply defined.
+
 
 LaTeX Warning: Label `tab:my_label' multiply defined.
 
@@ -643,13 +646,22 @@ LaTeX Warning: Label `tab:my_label' multiply defined.
 LaTeX Warning: Label `fig:vac' multiply defined.
 
 
-LaTeX Warning: Label `fig:vac' multiply defined.
+LaTeX Warning: Label `tab:my_label' multiply defined.
 
 
 LaTeX Warning: Label `fig:vac' multiply defined.
+
+
+LaTeX Warning: Label `tab:my_label' multiply defined.
+
+
+LaTeX Warning: Label `fig:vac' multiply defined.
+
+
+LaTeX Warning: Label `tab:my_label' multiply defined.
 
 )
-\openout1 = `lab.aux'.
+\openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
@@ -762,64 +774,61 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 33.
  (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
+<fig1.PNG, id=1, 664.73344pt x 280.04625pt>
+File: fig1.PNG Graphic file (type png)
+<use fig1.PNG>
+Package pdftex.def Info: fig1.PNG  used on input line 61.
+(pdftex.def)             Requested size: 284.52756pt x 119.87056pt.
+File: fig1.PNG Graphic file (type png)
+<use fig1.PNG>
+Package pdftex.def Info: fig1.PNG  used on input line 95.
+(pdftex.def)             Requested size: 284.52756pt x 119.87056pt.
+ [1
 
- []
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./fig1.PNG>]
+<Figure_1.png, id=21, 462.528pt x 346.896pt>
+File: Figure_1.png Graphic file (type png)
+<use Figure_1.png>
+Package pdftex.def Info: Figure_1.png  used on input line 140.
+(pdftex.def)             Requested size: 569.05515pt x 426.81186pt.
 
-<fig1.png, id=1, 493.845pt x 342.5297pt>
-File: fig1.png Graphic file (type png)
-<use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 49.
-(pdftex.def)             Requested size: 284.52756pt x 197.34503pt.
-[1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./fig1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
-
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2]
-<lol.png, id=24, 947.4597pt x 546.3612pt>
-File: lol.png Graphic file (type png)
-<use lol.png>
-Package pdftex.def Info: lol.png  used on input line 152.
-(pdftex.def)             Requested size: 569.05515pt x 328.15271pt.
- [3]
-<graph2.png, id=28, 947.4597pt x 546.3612pt>
-File: graph2.png Graphic file (type png)
-<use graph2.png>
-Package pdftex.def Info: graph2.png  used on input line 169.
-(pdftex.def)             Requested size: 569.05515pt x 328.15271pt.
- [4 <./lol.png>]
-<fchh.png, id=34, 941.6781pt x 532.26855pt>
-File: fchh.png Graphic file (type png)
-<use fchh.png>
-Package pdftex.def Info: fchh.png  used on input line 182.
-(pdftex.def)             Requested size: 569.05515pt x 321.66205pt.
- [5 <./graph2.png>]
-<Screenshot from 2023-10-11 14-58-30.png, id=39, 290.08376pt x 417.56pt>
-File: Screenshot from 2023-10-11 14-58-30.png Graphic file (type png)
-<use Screenshot from 2023-10-11 14-58-30.png>
-Package pdftex.def Info: Screenshot from 2023-10-11 14-58-30.png  used on input line 201.
-(pdftex.def)             Requested size: 284.52756pt x 409.58827pt.
- [6 <./fchh.png>] [7 <./Screenshot from 2023-10-11 14-58-30.png>] (./lab.aux)
+<Figure_2.png, id=28, 462.528pt x 346.896pt>
+File: Figure_2.png Graphic file (type png)
+<use Figure_2.png>
+Package pdftex.def Info: Figure_2.png  used on input line 207.
+(pdftex.def)             Requested size: 569.05515pt x 426.81186pt.
+ [3 <./Figure_1.png>]
+<Figure_3.png, id=33, 462.528pt x 346.896pt>
+File: Figure_3.png Graphic file (type png)
+<use Figure_3.png>
+Package pdftex.def Info: Figure_3.png  used on input line 241.
+(pdftex.def)             Requested size: 569.05515pt x 426.81186pt.
+ [4 <./Figure_2.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5 <./Figure_3.png>] [6] (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 12356 strings out of 478287
- 246222 string characters out of 5849289
- 543253 words of memory out of 5000000
- 30364 multiletter control sequences out of 15000+600000
+ 12349 strings out of 478287
+ 245998 string characters out of 5849289
+ 535247 words of memory out of 5000000
+ 30357 multiletter control sequences out of 15000+600000
  485128 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,12n,79p,1810b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb>
-Output written on lab.pdf (7 pages, 611682 bytes).
+ 71i,12n,79p,780b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb>
+Output written on main.pdf (6 pages, 343547 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 113 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
