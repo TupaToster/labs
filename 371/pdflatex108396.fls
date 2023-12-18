@@ -1,0 +1,4 @@
+PWD /home/i-am-tost/los_projectados/labs/371
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
